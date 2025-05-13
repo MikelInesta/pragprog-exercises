@@ -8,6 +8,7 @@ following examples should be accepted:
 
 # Solution
 
+```
 <time> ::= <12-hour-time> | <24-hour-time>
 
 <12-hour-time> ::= <12-hour-hour><period> | <12-hour-hour>:<minutes><period>
@@ -29,3 +30,4 @@ following examples should be accepted:
 <digit> ::= 0 | <positive-digit>
 
 <positive-digit> ::= 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
+```
