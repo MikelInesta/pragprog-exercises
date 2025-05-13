@@ -33,8 +33,9 @@ following examples should be accepted:
 
 ## Testing
 
-### ¿Is 4pm a valid time?
+### Is 4pm a valid time?
 
+```
 4pm
 
 4 is a <positive-digit> and therefore  a <12-hour-hour>
@@ -42,5 +43,48 @@ following examples should be accepted:
 pm is a <period>
 
 4pm is a <12-hour-hour><period> therefore it is <time>
+
+### ¿Is 4:38pm a valid time?
+```
+
+### Is 7:38pm a valid time?
+```
+7:38pm
+
+7 is a <positive-digit> and therefore a <12-hour-hour>
+
+: is a symbol
+
+3 is a <left-minute>
+
+8 is a <positive-digit> and therefore a <digit> 
+
+38 is a <left-minute><digit> and therefore a <minutes>
+
+pm is a <period>
+
+7:38pm is a <12-hour-hour>:<minutes><period> and therefore a <12-hour-time> and therefore a <time>
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
