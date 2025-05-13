@@ -1,0 +1,19 @@
+@startuml 4pm-parse-tree
+class "<time>" {}
+class "<12-hour-time>" {}
+class "<12-hour-hour>" {}
+class "<period>" {}
+class "pm" {}
+class "<positive-digit>" {}
+class "<digit>" {}
+class "4" {}
+
+"<time>" --> "<12-hour-time>" 
+"<12-hour-time>" --> "<12-hour-hour>"
+"<12-hour-time>" --> "<period>"
+"<period>" --> "pm"
+"<12-hour-hour>" --> "<positive-digit>"
+"<positive-digit>" --> "<digit>"
+"<digit>" --> "4"
+
+@enduml
