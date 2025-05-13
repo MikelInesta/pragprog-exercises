@@ -66,6 +66,23 @@ pm is a <period>
 7:38pm is a <12-hour-hour>:<minutes><period> and therefore a <12-hour-time> and therefore a <time>
 ```
 
+### Is 23:42 a valid time?
+
+```
+23:42
+
+23 is a <24-hour-value>
+
+: is a symbol
+
+4 is a <left-minute>
+
+2 is a <positive-digit> and therefore a <digit>
+
+42 is a <left-minute><digit> and therefore a <minutes>
+
+23:34 is a <24-hour-value>:<minutes> and therefore a <24-hour-time> and therefore a <time>
+```
 
 
 
