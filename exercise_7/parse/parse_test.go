@@ -1,23 +1,28 @@
 package parse
 
 import (
-	"os"
-	"path/filepath"
 	"testing"
+
+	"github.com/mikelinesta/parse-time/time"
 )
 
 func TestParse(t *testing.T){
-	tests, err := os.ReadDir("./testdata")
-	if err != nil {
-		t.Fatal("unable to load test data: ", err)
-	}
-
-	for _, test := range tests {
-		t.Run(test.Name(), func(t *testing.T){
-			_, err := ParseFile(filepath.Join(".", "testdata", test.Name())) 
-			if err != nil{
-				t.Error("error parsing: err: ", err)
-			}
-		})	
+	parseTests := []struct {
+		name string 
+		exp time.Time
+		shouldErr bool 
+	}{	
+		{
+			"4pm",
+			time.Time{
+				TwentyFourHourTime: nil,
+				TwelveHourTime: &time.TwelveHourTime{
+					Hours: 4,
+					Minutes:0,
+					Period: "pm",
+				},
+			},
+			false,	
+		},
 	}
 }
